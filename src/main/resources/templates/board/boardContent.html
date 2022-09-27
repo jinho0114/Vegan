@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+    </style>
+    <link href="static/css/headers.css" rel="stylesheet">
+</head>
+<body>
+
+<!--<div class="jumbotron text-center" style="margin-bottom:0">-->
+<!--    <h1>게시판</h1>-->
+<!--</div>-->
+
+<header class="p-4 text-white" style="background-color: #01AB69;">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+
+            <div class="text-end">
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <div><h3>비건게시판</h3></div>
+                    <li><a href="/index_login.html" class="nav-link px-2 text-white">홈</a></li>
+                    <li><a href="/board/boardList" class="nav-link px-2 text-white">게시판</a></li>
+                    <li><a href="/board_news/boardList" class="nav-link px-2 text-white">veganNEWS</a></li>
+                    <li><a href="/member/memberList" class="nav-link px-2 text-white">회원 목록</a> </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div class="container" style="margin-top:30px">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <h5 th:text="'제목 : ' + ${board.title}"></h5>
+            </div>
+            <div>
+                <td th:text="'작성자 : ' + ${board.createdBy}"></td>
+                <br><br>
+            </div>
+            <h5> 내용 </h5>
+            <div style="border:1px solid; padding:10px;">
+                <dl>
+                    <dd th:text="${board.content}"></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<form action="boardContent.html" th:action method="post">-->
+<!--    <div class="comment-form" style="text-align: center;">-->
+<!--        <div class="comment-form2" style="width:300px;height: 200px;display: inline-block">-->
+<!--            <label for="content">댓글 달기</label>-->
+<!--            <textarea class="form-control" id="content" name="content" rows="3"></textarea>-->
+<!--            <button type="submit" class="btn btn-primary" onclick="window.location.reload()">작성</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</form>-->
+<!--<div class="container">-->
+<!--    <table class="table table-hover">-->
+<!--        <tr>-->
+<!--            <th>번호</th>-->
+<!--            <th>작성자</th>-->
+<!--            <th>내용</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr th:each="comment : ${comments}">-->
+<!--            <td th:text="${comment.id}"></td>-->
+<!--            <td th:text="${comment.created_by}"></td>-->
+<!--            <td th:text="${comment.content}"></td>-->
+
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--</div>-->
+</body>
+<footer class="py-5 text-center">
+    <p>&copy; VGM</p>
+</footer>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>비건게시판</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/headers.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+
+    <link href="static/css/headers.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<main>
+
+    <header class="p-4 text-white" style="background-color: #01AB69;">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+                <div class="text-end">
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <div><h3>비건게시판</h3></div>
+                        <li><a href="/index_login.html" class="nav-link px-2 text-secondary">홈</a></li>
+                        <li><a href="/board/boardList" class="nav-link px-2 text-secondary">게시판</a></li>
+                        <li><a href="/board_news/boardList" class="nav-link px-2 text-secondary">veganNEWS</a></li>
+                        <li><a href="/member/memberList" class="nav-link px-2 text-secondary">회원 목록</a> </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+</main>
+
+<div style="padding:30px;"></div>
+
+<div class="container">
+    <table class="table table-hover">
+        <h3>자유게시판</h3>
+        <!--        /board/-->
+        <form class="form-inline d-flex justify-content-end" method="GET", th:action="@{boardList}" th:value="${param.searchText}">
+            <div class="form-group mx-sm-3 mb-2 pull-right">
+                <label for="searchText" class="sr-only">검색</label>
+                <input type="text" class="form-control" id="searchText" name="searchText">
+                <button type="submit" class="btn mb-2" style="background-color: #6974CF"><b>검색</b></button>
+            </div>
+        </form>
+        <thead>
+        <tr>
+            <th>비건단계</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>내용</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--        /board/-->
+        <tr th:each="board : ${boards}">
+            <td th:text="${board.grade}"></td>
+            <!--            <td><a th:href="@{'boardContent/' + ${board.id}}"><span th:text="${board.id}"></span></a></td>-->
+            <td><a th:href="@{'boardContent/' + ${board.id}}"><span th:text="${board.title}"></span></a></td>
+            <!--            <td th:text="${board.title}"></td>-->
+            <td th:text="${board.createdBy}"></td>
+            <td th:text="${board.content}"></td>
+            <!--            <td th:text="${board.countVisit}"></td>-->
+        </tr>
+        </tbody>
+    </table>
+
+    <hr/>
+    <button type="button" class="btn btn-default pull-right" onclick="location.href='/board/boardForm'">글쓰기</button>
+
+    <div class="center text-center">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justifiy-content-center" th:if="${totalPage != 0}">
+                <!--            /board/-->
+                <li class="page-item"><a class="page-link" th:href="@{boardList(page=${boards.pageable.pageNumber - 1}, searchText=${param.searchText})}">이전 페이지</a></li>
+                <li class="" th:classappend="${page == boards.pageable.pageNumber + 1} ? 'disabled'" th:each="page : ${#numbers.sequence(startPage, endPage)}">
+                    <!--                /board/-->
+                    <a th:href="@{boardList(page=${page - 1}, searchText=${param.searchText})}" th:text="${page}"></a>
+                </li>
+                <!--            /board/-->
+                <li class="page-item"><a class="page-link" th:href="@{boardList(page=${boards.pageable.pageNumber + 1}, searchText=${param.searchText})}">다음 페이지</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+<div  class="text-center">
+    <ul class="pagination">
+
+    </ul>
+</div>
+
+<script src="static/js/bootstrap.bundle.min.js"></script>
+</body>
+<footer class="py-5 text-center">
+    <p>&copy; VGM</p>
+</footer>
+</html>

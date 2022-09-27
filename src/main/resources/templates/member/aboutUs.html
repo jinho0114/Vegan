@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:font-family="http://www.w3.org/1999/xhtml">
+<head>
+    <title>About Us</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+    </style>
+    <link href="static/css/headers.css" rel="stylesheet">
+</head>
+<body>
+
+<!--<div class="jumbotron text-center" style="margin-bottom:0">-->
+<!--    <h1>게시판</h1>-->
+<!--</div>-->
+
+<header class="p-4 text-white" style="background-color: #01AB69;">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+            <div class="text-end">
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <div><h3>비건게시판</h3></div>
+                    <li><a href="/index_login.html" class="nav-link px-2 text-white">홈</a></li>
+                    <li><a href="/board/boardList" class="nav-link px-2 text-white">게시판</a></li>
+                    <li><a href="/board_news/boardList" class="nav-link px-2 text-white">veganNEWS</a></li>
+                    <li><a href="/member/memberList" class="nav-link px-2 text-white">회원 목록</a> </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<div class="container" style="margin-top:30px">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <h3><b>About US</b></h3>
+            <tr>
+                <h5>작성자: admin</h5>
+            </tr>
+            <div style="padding: 20px"></div>
+            <table class="table table-hover">
+
+
+                </thead>
+
+                <div style="border:1px; font-family:'Bebas Neue', Bebas Neue; ">
+
+                    <h5>
+                        이 커뮤니티의 이름은 지구와 우리 모두를 사랑하자는 의미를 담은 Us Love, Earth Love입니다.<br>
+                        이는 비건들만 이용할 수 있는 것이 아닌 환경에 관심을 가진 사람이라면<br>
+                        누구나 이용이 가능하며 이들끼리 서로 정확하고
+                        투명한 정보를 공유하면서<br>
+                        더욱 건강한 ‘비건’ 문화가 한국에 정착했으면 하는 바람입니다.
+                    </h5>
+                </div>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+<footer class="py-5 text-center">
+    <p>&copy; VGM</p>
+</footer>
+</html>
+
