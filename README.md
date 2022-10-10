@@ -39,5 +39,3 @@ DB : h2 db
 
 뉴스게시판 글 등록
 <img width="1426" alt="스크린샷 2022-10-10 오후 3 12 27" src="https://user-images.githubusercontent.com/86508110/194807361-c927d0f1-496e-4c3a-a677-f490fdb45694.png">
-
-
