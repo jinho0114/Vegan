@@ -1,8 +1,7 @@
-# VeganBoard_V100
-2022 sw프로젝트 경진 대회 출전용 최종 업데이트
-
-
-개발 동기
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Vegan&fontSize=90" />
+  </div>
+<h2>개발 동기</h2>
 
 1. 환경오염에 대한 관심이 높아지면서 환경과 건강을 더불어 생각하는 ‘비건’이 늘어나는 추세
 
@@ -11,11 +10,12 @@
 3. 21세기 정보화 시대에 맞지 않게 한 시대의 트렌드가 되어버린 ‘비건’과 관련된 정보와 소통창은 극소수
 
 <div align=center>
-<h3>Tech Stack</h3>
+<h2>📚Tech Stack📚</h2>
 
-Platforms&Languages
+✨Platforms&Languages✨
 </div>
 <div align="center">
+  <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=Java&logoColor=white"/>
 <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat&logo=Spring Boot&logoColor=white"/>
 <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat&logo=Spring Security&logoColor=white"/>
 <img src="https://img.shields.io/badge/Amazon Aws-232F3E?style=flat&logo=Amazon Aws&logoColor=white"/>
@@ -27,9 +27,9 @@ Platforms&Languages
 <img src="https://img.shields.io/badge/BootStrap-7952B3?style=flat&logo=BootStrap&logoColor=white"/>
 <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=flat&logo=Thymeleaf&logoColor=white"/>
 </div>
-
+<br>
 <div align="center">
-Tools
+💻Tools💻
 <br>
 <img src="https://img.shields.io/badge/IntelliJ IDEA-000000?style=flat&logo=IntelliJ IDEA&logoColor=white"/>
 <img src="https://img.shields.io/badge/Github-181717?style=flat&logo=Github&logoColor=white"/>
@@ -37,25 +37,27 @@ Tools
 </div>
 
 
-개발 구조
+<h2>개발 구조</h2>
 <img width="1033" alt="스크린샷 2022-10-10 오후 3 17 15" src="https://user-images.githubusercontent.com/86508110/194807725-3f5a33f7-fb7b-4b7a-aa96-7de66441e32e.png">
 
 
-메인 페이지
+<h2>메인 페이지</h2>
 <img width="1440" alt="스크린샷 2022-10-10 오후 3 11 03" src="https://user-images.githubusercontent.com/86508110/194807271-6be6376a-0d95-4732-9a7b-7392fa0caa72.png">
 
 
-회원 가입 페이지
+<h2>회원 가입 페이지</h2>
 
 <img width="1440" alt="스크린샷 2022-10-10 오후 3 11 36" src="https://user-images.githubusercontent.com/86508110/194807316-a877f728-2097-4661-98ec-f8f87313b818.png">
 
 
-자유게시판
+<h2>자유게시판</h2>
 <img width="1437" alt="스크린샷 2022-10-10 오후 3 12 00" src="https://user-images.githubusercontent.com/86508110/194807327-2d2d7cc8-644e-47be-aab2-57648687f69d.png">
 
 
-뉴스게시판 페이지
+<h2>뉴스게시판 페이지</h2>
 <img width="1438" alt="스크린샷 2022-10-10 오후 3 12 06" src="https://user-images.githubusercontent.com/86508110/194807339-e609acd3-4652-4195-a28d-0dbfe793054e.png">
 
-뉴스게시판 글 등록
+<h2>뉴스게시판 글 등록</h2>
 <img width="1426" alt="스크린샷 2022-10-10 오후 3 12 27" src="https://user-images.githubusercontent.com/86508110/194807361-c927d0f1-496e-4c3a-a677-f490fdb45694.png">
+
+  </div>
